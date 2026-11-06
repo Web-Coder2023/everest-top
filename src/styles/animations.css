@@ -1,0 +1,15 @@
+@keyframes float{0%,100%{translate:0 0}50%{translate:0 -8px}}
+@keyframes dash{to{stroke-dashoffset:-40}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.fl{animation:float 7s ease-in-out infinite;animation-delay:var(--fd,0s)}
+
+/* появление при прокрутке: только при включённом JS */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity var(--ev-dur-slow) var(--ev-ease),transform var(--ev-dur-slow) var(--ev-ease);transition-delay:var(--rd,0ms)}
+.js .rv.in{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}
+  .js .rv{opacity:1;transform:none}
+  .fl,.cube-body,.mc,.ln,.orbit,.spin{animation:none!important}
+}

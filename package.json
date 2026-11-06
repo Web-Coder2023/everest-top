@@ -1,0 +1,14 @@
+{
+  "name": "everest-digital",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Сайт Everest Digital: многостраничный статический сайт (генератор на Node.js без зависимостей)",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "dev": "node scripts/dev.mjs",
+    "check": "node scripts/check.mjs",
+    "preview": "node scripts/dev.mjs --dist"
+  }
+}
